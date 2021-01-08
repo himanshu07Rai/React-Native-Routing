@@ -7,8 +7,7 @@ const Feed = (props) => {
   console.log(props);
   return (
     <View style={styles.container}>
-      {route.params.data !== undefined ? <Text>{route.params.data}</Text> : ""}
-      <Text>Navigation Drawer</Text>
+      <Text>{route.params ? route.params.data : "Navigation Drawer"}</Text>
       <Button
         title="Go to feed Item"
         onPress={() =>
